@@ -39,9 +39,6 @@ app.use(session({
   secret: '~fC4%qZ2j*b!_K',
   resave: false,
   saveUninitialized: true,
-  cookie: {
-    secure: true,
-  },
   store: MongoStore.create({
     client: db.getClient(),
     dbName: 'test',
