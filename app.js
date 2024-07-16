@@ -8,7 +8,7 @@ var session = require('express-session');
 const bodyParser = require('body-parser');
 const schemas = require('./back/schemas');
 var db = schemas.db;
-const port = process.env.port || 5001;
+const port = process.env.port || 10000;
 
 // Importing routers
 var authRouter = require('./back/auth');
@@ -83,6 +83,6 @@ setInterval(checkDueBooks, 3600000*24); // Runs every day
 // sendEmailNoti('cs23bt072@iitdh.ac.in','udhebfijdbfj');
 
 // server listening
-//app.listen(port, () => {
-//  console.log(`server started on ${port}`);
-//});
+app.listen(port, () => {
+ console.log(`server started on ${port}`);
+ });
